@@ -1,0 +1,41 @@
+/*------------------------------------------------------*/
+/* ===== COMPOSITION ===== */
+
+.composition {
+    position: relative;
+    
+    &__photo {
+        position: absolute;
+        width: 55%;
+        height: auto;
+        border-radius: 2px;
+        box-shadow: 0 15px 40px rgba($color-black, 0.4);
+        transition: all 0.2s;
+        outline-offset: 2rem;
+        z-index: 1;
+        
+        &--p1 {
+            left: 0;
+            top: -2rem;
+        }
+        
+        &--p2 {
+            right: 0;
+            top: 2rem;
+        }
+        
+        &--p3 {
+            left: 20%;
+            top: 10rem;
+        }
+        
+        &:hover {
+            outline: 1.5rem solid $color-primary;
+            transform: scale(1.05) translateY(-0.5rem);
+            box-shadow: 0 25px 40px rgba($color-black, 0.5);
+            z-index: 2;
+        }
+    }
+    
+    &:hover &__photo:not(:hover) { transform: scale(0.95); }
+}

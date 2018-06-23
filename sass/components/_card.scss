@@ -1,0 +1,173 @@
+/*------------------------------------------------------*/
+/* ===== CARD ===== */
+
+.card {
+    // Functionality
+    position: relative;
+    height: 50rem;
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+    
+    &__side {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 50rem;
+        border-radius: 3px;
+        box-shadow: 0 20px 40px rgba($color-black, 0.2);
+        overflow: hidden;
+        transition: all 0.8s ease;
+        backface-visibility: hidden;
+        
+        &--front {
+            background-color: $color-white;
+        }
+        
+        &--back {
+            background-color: #ea8005;
+            transform: rotateY(180deg);
+            
+            &-1 {
+                background-image: linear-gradient(
+                    to right bottom, 
+                    $color-secondary-light, 
+                    $color-secondary-dark
+                );
+            }
+            
+            &-2 {
+                background-image: linear-gradient(
+                    to right bottom, 
+                    $color-primary-light, 
+                    $color-primary-dark
+                );
+            }
+            
+            &-3 {
+                background-image: linear-gradient(
+                    to right bottom, 
+                    $color-tertiary-light, 
+                    $color-tertiary-dark
+                );
+            }
+        }
+    }
+    
+    &:hover &__side--front {
+        transform: rotateY(-180deg);
+    }
+    
+    &:hover &__side--back {
+        transform: rotateY(0);
+    }
+    
+    // Front side styling
+    &__picture {
+        height: 20rem;
+        background-size: cover;
+        background-blend-mode: soft-light;
+        clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+        
+        &--1 {
+            background-image: linear-gradient(
+                to right bottom, 
+                $color-secondary-light, 
+                $color-secondary-dark,
+            ), url(../img/img_doc_brown.png);
+        }
+        
+        &--2 {
+            background-image: linear-gradient(
+                to right bottom,
+                $color-primary-light,
+                $color-primary-dark,
+            ), url(../img/img_marty.png);
+        }
+        
+        &--3 {
+            background-image: linear-gradient(
+                to right bottom,
+                $color-tertiary-light,
+                $color-tertiary-dark,
+            ), url(../img/img_biff.png);
+        }
+    }
+    
+    &__heading {
+        position: absolute;
+        top:12rem;
+        right: 2rem;
+        padding: 0 1.5rem;
+        color: $color-white;
+        font-size: 2.8rem;
+        font-weight: 300;
+        text-align: right;
+        text-transform: uppercase;
+        
+        &--1 {
+            background-image: linear-gradient(
+                to right bottom, 
+                rgba($color-secondary-light, 0.9), 
+                rgba($color-secondary-dark, 0.9)
+            );
+        }
+        
+        &--2 {
+            background-image: linear-gradient(
+                to right bottom, 
+                rgba($color-primary-light, 0.9), 
+                rgba($color-primary-dark, 0.9)
+            );
+        }
+        
+        &--3 {
+            background-image: linear-gradient(
+                to right bottom, 
+                rgba($color-tertiary-light, 0.9), 
+                rgba($color-tertiary-dark, 0.9)
+            );
+        }
+        
+    }
+    
+    &__details {
+        margin-top: 5rem;
+        padding: 0 4rem;
+        text-align: center;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
