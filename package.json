@@ -1,0 +1,22 @@
+{
+  "name": "pastfuture",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/helwyr392/PastFuture.git"
+  },
+  "author": "John Snable",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/helwyr392/PastFuture/issues"
+  },
+  "homepage": "https://github.com/helwyr392/PastFuture#readme",
+  "devDependencies": {
+    "node-sass": "^4.9.0"
+  }
+}
