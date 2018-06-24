@@ -41,7 +41,7 @@
                 <span class="heading-primary-main">Past &amp; Future</span>
                 <span class="heading-primary-sub">Time Travel Adventure Tours</span>
             </h1>
-            <a href="#" class="btn btn-white btn-animated">Begin Your Journey</a>
+            <a href="#about" class="btn btn-white btn-animated">Begin Your Journey</a>
         </div>
     </header>
     
@@ -199,7 +199,7 @@
             <div class="row">
                 <div class="contact">
                     <div class="contact__form">
-                        <form action="#" method="POST">
+                        <form id="contact-us" action="#" method="POST">
                             <form action="#" method="POST">
                                 <h2 class="heading-secondary u-margin-bottom-sm">Contact Us</h2>
                                 <div class="form__group">
@@ -245,79 +245,67 @@
         </div>
     </footer>
     
+    <div class="confirmation-container">
+        <!-- Submission form success -->
+        <div class="confirmation js__success">
+            <div class="confirmation__content">
+                <div class="confirmation__left confirmation__left--success"></div>
+                <div class="confirmation__right">
+                    <h2 class="heading-secondary">Thank You</h2>
+                    <h3 class="heading-tertiary">
+                        Your submission as been received.
+                    </h3>
+                    <p class="paragraph">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas perferendis, at, debitis ipsam assumenda corporis accusantium magni ratione deleniti.
+                    </p>
+                    <button class="btn btn-green js__btn-success">Close</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Submission form error -->
+        <div class="confirmation js__error">
+            <div class="confirmation__content">
+                <div class="confirmation__left confirmation__left--error"></div>
+                <div class="confirmation__right">
+                    <h2 class="heading-error">Great Scott!</h2>
+                    <h3 class="heading-tertiary">
+                        It looks like there was a problem with your submission.
+                    </h3>
+                    <p class="paragraph">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas perferendis, at, debitis ipsam assumenda corporis accusantium magni ratione deleniti.
+                    </p>
+                    <button class="btn btn-error js__btn-error">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
     
-    
-    <!-- TEST GRID -----------------------------------------------------------------------
-    <section class="grid-test">
-        <div class="row">
-            <div class="col-1-of-2">
-                Col 1 of 2
+<!--
+    <div class="confirmation">
+        <div class="confirmation__content">
+            <div class="confirmation__content--success">
+                <img class="confirmation__img" src="img/img_success.png" alt="Success">
+                <h2 class="heading-secondary">Thank You</h2>
+                <h3 class="heading-tertiary">Thank you for reaching out to us...</h3>
+                <p class="paragraph">
+                    We'll get back to you about any questions you may have as soon as possible.
+                </p>
             </div>
-            <div class="col-1-of-2">
-                Col 1 of 2
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-1-of-3">
-                Col 1 of 3
-            </div>
-            <div class="col-1-of-3">
-                Col 1 of 3
-            </div>
-            <div class="col-1-of-3">
-                Col 1 of 3
+            <div class="confirmation__content--error">
+                <img class="confirmation__img" src="img/img_error.png" alt="Success">
+                <h2 class="heading-error">Great Scott!</h2>
+                <h3 class="heading-tertiary">It looks like we may have encountered a problem.</h3>
+                <p class="paragraph">
+                    There was an error with your submission.  Please try again.
+                </p>
             </div>
         </div>
-        
-        <div class="row">
-            <div class="col-1-of-3">
-                Col 1 of 3
-            </div>
-            <div class="col-2-of-3">
-                Col 2 of 3
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-1-of-4">
-                Col 1 of 4
-            </div>
-            <div class="col-1-of-4">
-                Col 1 of 4
-            </div>
-            <div class="col-1-of-4">
-                Col 1 of 4
-            </div>
-            <div class="col-1-of-4">
-                Col 1 of 4
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-1-of-4">
-                Col 1 of 4
-            </div>
-            <div class="col-1-of-4">
-                Col 1 of 4
-            </div>
-            <div class="col-2-of-4">
-                Col 2 of 4
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-1-of-4">
-                Col 1 of 4
-            </div>
-            <div class="col-3-of-4">
-                Col 3 of 4
-            </div>
-        </div>
-    </section>
-    -->
+    </div>
+-->
 
 <script src="js/vendor/jquery-331.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.2/jquery.form.min.js" integrity="sha384-FzT3vTVGXqf7wRfy8k4BiyzvbNfeYjK+frTVqZeNDFl8woCbF0CYG6g2fMEFFo/i" crossorigin="anonymous"></script>
 <script src="js/script.js"></script>
 </body>
 </html>

@@ -65,6 +65,25 @@ body {
     text-transform: uppercase;
 }
 
+/* --- error heading */
+
+.heading-error {
+    display: inline-block;
+    color: transparent;
+    font-size: 3.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background-image: linear-gradient(to right, $color-secondary-light, $color-secondary-dark);
+    -webkit-background-clip: text;
+    transition: all 0.2s;
+    
+    &:hover {
+        transform: skewX(15deg) skewY(2deg) scale(1.1);
+        text-shadow: 5px 10px 20px rgba($color-black, 0.2)
+    }
+}
+
 /* --- paragraph */
 
 .paragraph {

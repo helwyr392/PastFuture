@@ -56,11 +56,11 @@
         }
     }
     
-    &-green {
+    &-green,
+    &-error {
         display: inline-block;
         position: relative;
         padding: 15px 70px;
-        background-color: $color-primary-dark;
         color: $color-white;
         font-size: $default-font-size;
         text-transform: uppercase;
@@ -68,10 +68,18 @@
         border-radius: 100px;
         transition: all 0.2s;
         backface-visibility: hidden;
+    }
+    
+    &-green {
+        background-color: $color-primary-dark;
         
-        &::after {
-            background-color: $color-primary;
-        }
+        &::after { background-color: $color-primary; }
+    }
+    
+    &-error {
+        background-color: $color-secondary-dark;
+        
+        &::after { background-color: $color-secondary-dark; }
     }
 
     &-animated {
