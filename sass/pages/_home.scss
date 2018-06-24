@@ -27,3 +27,27 @@
     padding: 25rem 0;
     background-color: $color-grey-light-1;
 }
+
+.section-contact {
+    padding: 15rem 0;
+    background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
+}
+
+.contact {
+    height: 50rem;
+    background-image: linear-gradient(
+        105deg,
+        rgba($color-white, 0.9) 0%,
+        rgba($color-white, 0.9) 50%,
+        transparent 50%
+    ), url(../img/img_delorean.png);
+    background-size: 100%;
+    background-position: center;
+    border-radius: 3px;
+    box-shadow: 0 20px 40px rgba($color-black, 0.3);
+    
+    &__form {
+        width: 50%;
+        padding: 6rem;
+    }
+}

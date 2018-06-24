@@ -2,6 +2,9 @@
 /* ===== BUTTONS ===== */
 
 .btn {
+    border: none;
+    cursor: pointer;
+    
     &:link,
     &:visited {
         display: inline-block;
@@ -25,7 +28,8 @@
         }
     }
 
-    &:active {
+    &:active,
+    &:focus {
         transform: translateY(-1px);
         box-shadow: 0 5px 10px rgba($color-black, 0.4);
     }
@@ -49,6 +53,24 @@
         
         &::after {
             background-color: $color-white;
+        }
+    }
+    
+    &-green {
+        display: inline-block;
+        position: relative;
+        padding: 15px 70px;
+        background-color: $color-primary-dark;
+        color: $color-white;
+        font-size: $default-font-size;
+        text-transform: uppercase;
+        text-decoration: none;
+        border-radius: 100px;
+        transition: all 0.2s;
+        backface-visibility: hidden;
+        
+        &::after {
+            background-color: $color-primary;
         }
     }
 
