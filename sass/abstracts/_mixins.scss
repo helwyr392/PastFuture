@@ -1,10 +1,22 @@
 /*------------------------------------------------------*/
 /* ===== MIXINS ===== */
 
+/* --- clearfix */
 @mixin clearfix {
     &::after {
         content: "";
         display: table;
         clear: both;
+    }
+}
+
+/* --- center element horizontally and vertically */
+
+@mixin centerElement {
+    & {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 }

@@ -1,6 +1,8 @@
 /* --- import abstracts */
 /*------------------------------------------------------*/
 /* ===== MIXINS ===== */
+/* --- clearfix */
+/* --- center element horizontally and vertically */
 /*------------------------------------------------------*/
 /* ===== VARIABLES ===== */
 /* --- colors */
@@ -275,12 +277,13 @@ body {
     padding: 0 4rem;
     text-align: center; }
   .card__cta {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     color: #fff;
     text-align: center; }
+    .card__cta {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); }
   .card__price-only {
     font-size: 1.4rem;
     text-transform: uppercase; }
@@ -473,10 +476,81 @@ body {
     font-size: 350%; }
   .header__text-container {
     position: absolute;
-    top: 40%;
+    top: 45%;
     left: 50%;
-    text-align: center;
-    transform: translate(-50%, -50%); }
+    transform: translate(-50%, -50%);
+    text-align: center; }
+
+/*------------------------------------------------------*/
+/* ===== NAVIGATION ===== */
+.navigation {
+  transition: all 0.5s ease; }
+  .navigation__checkbox {
+    display: none; }
+  .navigation__button {
+    position: fixed;
+    top: 6rem;
+    right: 6rem;
+    width: 7rem;
+    height: 7rem;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+    cursor: pointer; }
+  .navigation__background {
+    position: fixed;
+    top: 6.5rem;
+    right: 6.5rem;
+    width: 6rem;
+    height: 6rem;
+    background-image: radial-gradient(#7ed56f, #28b485);
+    border-radius: 50%;
+    z-index: 99;
+    transition: transform 0.8s; }
+  .navigation__nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100vh;
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.8s cubic-bezier(0.64, 0.32, 0.66, 1.18); }
+  .navigation__list {
+    position: absolute;
+    top: 20%;
+    right: 18%;
+    list-style: none; }
+  .navigation__item {
+    margin: 1rem; }
+  .navigation__link:link, .navigation__link:visited {
+    display: inline-block;
+    padding: 0.5rem 2rem;
+    background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #fff 50%);
+    background-size: 225%;
+    color: #fff;
+    font-size: 3rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.3s; }
+  .navigation__link:hover, .navigation__link:active {
+    background-position: 100%;
+    color: #28b485;
+    transform: translateX(1rem); }
+  .navigation__link span {
+    display: inline-block;
+    margin-right: 1.5rem; }
+  .navigation__checkbox:checked ~ .navigation__background {
+    transform: scale(30) rotate(180deg); }
+  .navigation__checkbox:checked ~ .navigation__nav {
+    width: 100%;
+    opacity: 1;
+    visibility: visible; }
 
 /* --- pages */
 /*------------------------------------------------------*/
