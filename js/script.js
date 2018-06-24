@@ -35,3 +35,29 @@ $('#contact-us').ajaxForm({
         onError();
     }
 });
+
+/* ----- Scroll to buttons ----- */
+
+// From Begin button to About section / From About link to About section
+$('.js__btn-begin, .js__btn-about').click(function() {
+    // Scroll to top of section in 1000 milliseconds (1 sec)
+    $('html, body').animate({scrollTop: $('.js__section-about').offset().top}, 1000);
+});
+
+// From Meet the Features link to the Features section
+$('.js__btn-features').click(function() {
+    // Scroll to top of section in 1000 milliseconds (1 sec)
+    $('html, body').animate({scrollTop: $('.js__section-features').offset().top}, 1000);
+});
+
+// From Meet the Team link to the Team section
+$('.js__btn-meet').click(function() {
+    // Scroll to top of section in 1000 milliseconds (1 sec)
+    $('html, body').animate({scrollTop: $('.js__section-meet').offset().top + 150}, 1000);
+});
+
+// From Contact link to the Contact section
+$('.js__btn-contact').click(function() {
+    // Scroll to top of section in 1000 milliseconds (1 sec)
+    $('html, body').animate({scrollTop: $('.js__section-contact').offset().top}, 1000);
+});
